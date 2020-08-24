@@ -1,0 +1,45 @@
+.burger {
+  cursor: pointer;
+  height: 4rem;
+  border: 1px solid black;
+  background-color: white;
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
+  & span {
+    position: relative;
+    border-radius: 2rem;
+    height: 0.3rem;
+    display: block;
+    background-color: black;
+    width: 4rem;
+    transition: all 0.5s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: black;
+      display: block;
+      height: 0.3rem;
+      width: 4rem;
+      transition: all 0.5s;
+      border-radius: 2rem;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+}

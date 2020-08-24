@@ -1,0 +1,83 @@
+.burger {
+  &__1 {
+    &:hover span {
+      animation: animationTop 1.5s;
+    }
+
+    &:hover span::before {
+      animation: animation1 1.5s;
+    }
+
+    &:hover span::after {
+      animation: animation2 1.5s;
+    }
+  }
+}
+
+@keyframes animationTop {
+  0% {
+    background-color: black;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes animation1 {
+  0% {
+    transform: rotate(0deg);
+    top: -1rem;
+  }
+
+  25% {
+    transform: rotate(0deg);
+    top: 0;
+  }
+
+  50% {
+    transform: rotate(-40deg);
+    top: 0;
+  }
+
+  75% {
+    transform: rotate(0deg);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    top: -1rem;
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    transform: rotate(0deg);
+    top: 1rem;
+  }
+
+  25% {
+    transform: rotate(0deg);
+    top: 0;
+  }
+
+  50% {
+    transform: rotate(40deg);
+    top: 0;
+  }
+
+  75% {
+    transform: rotate(0deg);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    top: 1rem;
+  }
+}
